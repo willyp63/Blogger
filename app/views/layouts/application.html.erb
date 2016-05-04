@@ -14,6 +14,21 @@
   <%= yield %>
 
   <hr>
+
+  <table>
+    <tbody>
+      <tr>
+        <td><%= link_to 'Articles', articles_path %></td>
+        <td>|</td>
+        <td><%= link_to 'Tags', tags_path %></td>
+        <td>|</td>
+        <td><%= link_to 'Authors', authors_path %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <hr>
+  
   <h6>
     <% if logged_in? %>
       <%= "Logged in as #{current_user.email}" %>
